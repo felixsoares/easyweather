@@ -41,9 +41,15 @@ public class MainActivityController {
                 @Override
                 protected String doInBackground(Void... voids) {
                     try {
-                        String locale = Locale.getDefault().getLanguage();
-                        URL url = new URL(Constantes.HOST+city+"&lang="+locale);
+                        String locale = "";
+
+                        if(Locale.getDefault().getLanguage().equals("pt")){
+                            locale = "&lang=pt";
+                        }
+
+                        URL url = new URL(Constantes.HOST+city+locale);
                         InputStreamReader reader = new InputStreamReader(url.openStream());
+
                         if(reader != null) {
                             viewModelMain[0] = new Gson().fromJson(reader, ViewModelMain.class);
 

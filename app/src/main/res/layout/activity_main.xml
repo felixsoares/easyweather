@@ -21,18 +21,19 @@
         android:layout_height="match_parent">
 
         <RelativeLayout
-            android:padding="10dp"
             android:layout_above="@+id/llContent"
             android:id="@+id/llWeather"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
+                android:scaleType="centerCrop"
                 android:id="@+id/imgWeather"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
             <TextView
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginTop="50dp"
                 android:id="@+id/txtCity"
@@ -43,6 +44,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:textColor="@color/white"
                 android:layout_below="@+id/txtCity"
                 android:id="@+id/txtCountry"
                 android:gravity="center_horizontal"
@@ -52,6 +54,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:textColor="@color/white"
                 android:id="@+id/txtRad"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -76,6 +79,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:textStyle="bold"
                     android:id="@+id/txtInfo"
                     android:text="Texto sobre"
                     android:layout_weight="1"
@@ -105,6 +109,13 @@
 
             </LinearLayout>
 
+            <View
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/darker_gray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
             <LinearLayout
                 android:padding="10dp"
                 android:layout_width="match_parent"
@@ -125,6 +136,13 @@
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
+
+            <View
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/darker_gray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
 
             <LinearLayout
                 android:padding="10dp"
